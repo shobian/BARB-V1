@@ -12,9 +12,9 @@ export function Footer() {
                             <Image
                                 src="/logo-white.png"
                                 alt="BARB Logo"
-                                width={150}
-                                height={50}
-                                className="h-10 w-auto"
+                                width={300}
+                                height={100}
+                                className="h-15 w-auto"
                             />
                         </Link>
                         <p className="text-sm text-gray-300 leading-relaxed">
