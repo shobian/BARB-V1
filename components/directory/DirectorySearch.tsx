@@ -22,7 +22,7 @@ export function DirectorySearch({
         } else {
             params.delete('query');
         }
-        replace(`${pathname}?${params.toString()}`);
+        replace(`${pathname}?${params.toString()}`, { scroll: false });
     }, 300);
 
     const handleFilter = useDebouncedCallback((key: string, value: string) => {
@@ -32,7 +32,7 @@ export function DirectorySearch({
         } else {
             params.delete(key);
         }
-        replace(`${pathname}?${params.toString()}`);
+        replace(`${pathname}?${params.toString()}`, { scroll: false });
     }, 300);
 
     const handleStatusFilter = (status: string) => {
@@ -42,7 +42,7 @@ export function DirectorySearch({
         } else {
             params.delete('status');
         }
-        replace(`${pathname}?${params.toString()}`);
+        replace(`${pathname}?${params.toString()}`, { scroll: false });
     };
 
     const currentStatus = searchParams.get('status') || 'all';
@@ -110,33 +110,33 @@ export function DirectorySearch({
                 <button
                     onClick={() => handleStatusFilter('authorized')}
                     className={`px-4 py-2 rounded-full text-sm font-medium flex items-center gap-1.5 transition-colors border ${currentStatus === 'authorized'
-                        ? 'bg-green-500 text-white border-green-500'
+                        ? 'bg-[var(--color-primary)] text-white border-[var(--color-primary)]'
                         : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
                         }`}
                 >
-                    <span className={`w-2 h-2 rounded-full ${currentStatus === 'authorized' ? 'bg-white' : 'bg-green-500'}`} />
-                    Authorized
+                    <span className={`w-2 h-2 rounded-full ${currentStatus === 'authorized' ? 'bg-white' : 'bg-[var(--color-primary)]'}`} />
+                    Active
                 </button>
 
                 <button
                     onClick={() => handleStatusFilter('unauthorized')}
                     className={`px-4 py-2 rounded-full text-sm font-medium flex items-center gap-1.5 transition-colors border ${currentStatus === 'unauthorized'
-                        ? 'bg-red-500 text-white border-red-500'
+                        ? 'bg-[#EAB308] text-white border-[#EAB308]'
                         : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
                         }`}
                 >
-                    <span className={`w-2 h-2 rounded-full ${currentStatus === 'unauthorized' ? 'bg-white' : 'bg-red-500'}`} />
-                    Unauthorized
+                    <span className={`w-2 h-2 rounded-full ${currentStatus === 'unauthorized' ? 'bg-white' : 'bg-[#EAB308]'}`} />
+                    Inactive
                 </button>
 
                 <button
                     onClick={() => handleStatusFilter('approved')}
                     className={`px-4 py-2 rounded-full text-sm font-medium flex items-center gap-1.5 transition-colors border ${currentStatus === 'approved'
-                        ? 'bg-blue-500 text-white border-blue-500'
+                        ? 'bg-[#EAB308] text-white border-[#EAB308]'
                         : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50'
                         }`}
                 >
-                    <span className={`w-2 h-2 rounded-full ${currentStatus === 'approved' ? 'bg-white' : 'bg-blue-500'}`} />
+                    <span className={`w-2 h-2 rounded-full ${currentStatus === 'approved' ? 'bg-white' : 'bg-[#EAB308]'}`} />
                     Approved Professionals
                 </button>
             </div>

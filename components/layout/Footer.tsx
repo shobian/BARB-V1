@@ -46,13 +46,26 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Legal / Contact Info (Static for now) */}
+                    {/* Legal & Partnerships */}
                     <div>
-                        <h4 className="font-semibold mb-4 text-[var(--color-accent)]">Legal</h4>
-                        <ul className="space-y-2 text-sm text-gray-300">
+                        <h4 className="font-semibold mb-4 text-[var(--color-accent)]">Legal & Partnerships</h4>
+                        <ul className="space-y-2 text-sm text-gray-300 mb-6">
                             <li><a href="/IBAO-Ethical-Guidelines-V100.pdf" target="_blank" rel="noopener noreferrer" className="hover:text-white">Ethical Standards</a></li>
                             <li><Link href="/legal/terms" className="hover:text-white">Terms & Conditions</Link></li>
                         </ul>
+
+                        <div className="pt-4 border-t border-gray-700/50">
+                            <p className="text-xs text-gray-300 font-medium mb-3 leading-tight">
+                                Proudly collaborating with the International Behavior Analysis Organization (IBAO).
+                            </p>
+                            <Image
+                                src="/IBAO logo.png"
+                                alt="IBAO Logo"
+                                width={100}
+                                height={50}
+                                className="w-24 h-auto object-contain bg-white/10 rounded pt-1 pb-1 pl-2 pr-2"
+                            />
+                        </div>
                     </div>
                 </div>
 

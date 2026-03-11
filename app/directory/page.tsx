@@ -46,7 +46,7 @@ export default async function DirectoryPage({
                         Verified Practitioners
                     </span>
                     <h1 className="text-3xl md:text-5xl font-bold font-heading text-[var(--color-primary)] mb-6">
-                        Need Support? Start With Someone You Can Trust.
+                        Need Support?<br /> Start With Someone You Can Trust.
                     </h1>
                     <div className="max-w-3xl mx-auto space-y-4 mb-4">
                         <p className="text-lg text-gray-700 leading-relaxed font-light">
@@ -75,16 +75,16 @@ export default async function DirectoryPage({
                             <h3 className="font-semibold text-gray-900 mb-3 text-sm uppercase tracking-wider">Status Note</h3>
                             <div className="flex flex-col gap-2 mb-3 border-b border-gray-100 pb-3">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-green-500 shrink-0" />
-                                    <span className="text-sm text-gray-700 font-medium">Authorized : Certified & Practicing</span>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-[var(--color-primary)] shrink-0" />
+                                    <span className="text-sm text-gray-700 font-medium">Active : Certified & authorised to practise</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-red-500 shrink-0" />
-                                    <span className="text-sm text-gray-700 font-medium">Unauthorized : Certified & Not Practicing</span>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-[#EAB308] shrink-0" />
+                                    <span className="text-sm text-gray-700 font-medium">Inactive : Certified but not authorised to practise</span>
                                 </div>
                                 <div className="flex items-center gap-2">
-                                    <div className="w-2.5 h-2.5 rounded-full bg-blue-500 shrink-0" />
-                                    <span className="text-sm text-gray-700 font-medium">Approved Professionals : Not Certified</span>
+                                    <div className="w-2.5 h-2.5 rounded-full bg-[#EAB308] shrink-0" />
+                                    <span className="text-sm text-gray-700 font-medium">Approved Professionals</span>
                                 </div>
                             </div>
                             <p className="text-xs text-gray-500 italic mt-1">
@@ -104,7 +104,7 @@ export default async function DirectoryPage({
                             <DirectorySearch cities={uniqueCities} specialities={uniqueSpecialities} />
                         </Suspense>
                     </div>
-                    <Suspense fallback={
+                    <Suspense key={`${query}-${status}-${city}-${speciality}`} fallback={
                         <div className="flex justify-center py-20">
                             <Loader2 className="w-8 h-8 animate-spin text-[var(--color-primary)]" />
                         </div>
@@ -129,12 +129,9 @@ export default async function DirectoryPage({
                             <p>
                                 “Approved” status may be granted to psychiatrists, physicians, clinical psychologists, speech and language therapists, occupational therapists, and physiotherapists.
                             </p>
-                            <div className="pt-4 mt-4 border-t border-gray-100">
-                                <p className="font-medium text-gray-900 mb-1">Note:</p>
-                                <p className="text-gray-600">
-                                    Inclusion in the BARB Directory does not imply that BARB licenses, regulates, or oversees the individual’s primary professional practice. Regulation and professional accountability remain the responsibility of the practitioner’s respective governing body.
-                                </p>
-                            </div>
+                            <p>
+                                Inclusion in the BARB Directory does not imply that BARB licenses, regulates, or oversees the individual’s primary professional practice. Regulation and professional accountability remain the responsibility of the practitioner’s respective governing body.
+                            </p>
                         </div>
                     </div>
                 </div>

@@ -11,7 +11,7 @@ export function ContactHero() {
                         Let’s build a better standard of care together.
                     </h1>
 
-                    <p className="text-xl md:text-2xl font-light text-[var(--color-primary)]/80 max-w-3xl mx-auto mb-8 leading-relaxed uppercase animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
+                    <p className="text-xl md:text-2xl font-light text-[var(--color-primary)]/80 max-w-3xl mx-auto mb-8 leading-relaxed animate-in fade-in slide-in-from-bottom-6 duration-1000 delay-200">
                         Whether you're a therapist with a question, a parent looking for guidance, or a partner ready to collaborate, you're in the right place.
                     </p>
 

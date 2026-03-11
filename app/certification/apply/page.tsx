@@ -20,7 +20,7 @@ export default function ApplyPage() {
                         <span className="text-[var(--color-primary)] font-medium">Apply</span>
                     </div>
                     <h1 className="text-3xl md:text-4xl font-bold font-heading text-[var(--color-primary)] mb-4">
-                        Application for Certification
+                        Application to become Registered Behaviour Therapist or Registered Behaviour Analyst.
                     </h1>
                     <p className="text-gray-600 max-w-2xl">
                         Please ensure you have read the eligibility criteria before proceeding. All information submitted is treated with strict confidentiality.

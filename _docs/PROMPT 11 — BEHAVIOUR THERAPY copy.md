@@ -1,17 +1,17 @@
 
+# ABOUT BEHAVIOUR THERAPY PAGE STRUCTURE & COPY
+
+---
+
 # HERO SECTION
 
 ### Headline (H1)
 
 BEHAVIOUR THERAPY, EXPLAINED.
 
-### Body Copy
-
-Behaviour therapy is a structured, science-backed approach to helping individuals; especially children; develop meaningful skills and reduce behaviours that interfere with daily life. If you're new to the concept, you're not alone. This page is here to help.
-
 ---
 
-# SECTION 1 – WHAT IS BEHAVIOUR THERAPY?
+# SECTION 1
 
 ### Crosshead
 
@@ -19,45 +19,108 @@ What is Behaviour Therapy?
 
 ### Body Copy
 
-Behaviour Therapy is a form of psychotherapy that focuses on using the scientific principles of learning such as classical and operant conditioning to modify behaviour.
+Behaviour therapy is the professional application of the science of Applied Behaviour Analysis (ABA) delivered by certified and regulated practitioners.
 
-Instead of focusing on underlying psychological causes, this therapy zeros in on the observable behaviour itself and the environmental factors that trigger and reinforce it. The goal is to reduce unwanted symptoms and change maladaptive behaviour patterns.
-
-Common techniques used within this broad approach include:
-    Systematic Desensitisation
-    Behaviour Rehearsal
-    Modelling
-    Biofeedback
-
-
+It ensures that professionals practising behaviour therapy meet defined minimum standards of qualification, supervised experience, competence, and successful completion of recognised examinations. Practitioners must comply with established ethical standards and maintain ongoing continuing professional development.
 
 ---
 
-# SECTION 2 – WHAT IS ABA?
+# SECTION 2
 
 ### Crosshead
 
-What is Applied Behaviour Analysis (ABA)?
+What is Applied Behaviour Analysis?
 
-Applied Behaviour Analysis (ABA) is a specific, scientific discipline that applies established principles of learning and motivation to improve socially significant behaviour.
+### Body Copy
 
-ABA is heavily based on research and requires a rigorous, data-driven approach. It involves:
+Applied Behaviour Analysis is a scientific discipline devoted to the study of behaviour and the environmental variables that influence it. It is grounded in decades of experimental and applied research in the science of learning and behaviour.
 
-Precise Assessment: Identifying the function of a behaviour.
+Since the mid twentieth century, behaviour analytic research has produced a large body of peer reviewed evidence demonstrating effective methods for teaching skills, increasing adaptive behaviour, and reducing behaviours that interfere with learning and quality of life. The discipline is characterised by systematic measurement, data-based decision making, functional assessment, and conceptual consistency.
 
-Planned Intervention: Developing specific strategies for change.
-
-Continuous Measurement: Objectively tracking progress with data.
-
-Data-Based Decision Making: Adjusting interventions based on measured results.
+Applied Behaviour Analysis is recognised internationally as a research driven and evidence-based field with strong methodological standards.
 
 ---
 
-# SECTION 3 – WHAT CAN BEHAVIOUR THERAPY HELP WITH?
+# SECTION 3
+
+### Crosshead
+
+What Criteria Must an Approach Meet to Be Considered ABA?
+
+### Body Copy
+
+For an intervention to be classified as Applied Behaviour Analysis, it must meet the seven defining dimensions of the field:
+
+Applied
+Targets behaviour of clear social significance.
+
+Behavioural
+Uses objective, observable, and measurable definitions of behaviour.
+
+Analytic
+Demonstrates a functional relationship between the intervention and behaviour change.
+
+Technological
+Procedures are described clearly enough for replication by a competent practitioner.
+
+Conceptually Systematic
+Interventions are consistent with established behavioural principles.
+
+Effective
+Produces meaningful and practical behaviour change.
+
+Generality
+Behaviour change maintains over time and across settings.
+
+---
+
+# SECTION 4
+
+### Crosshead
+
+Quality Criterion
+
+### Body Copy
+
+All ABA practice must also demonstrate social validity. Goals, methods, and outcomes must be acceptable, ethically sound, and meaningful to the individual and relevant stakeholders.
+
+---
+
+# SECTION 5
+
+### Crosshead
+
+How ABA is practised?
+
+### Body Copy
+
+ABA is heavily based on research and requires a rigorous, data-driven approach. It involves:
+
+Precise Assessment
+
+Identifying the function of a behaviour.
+
+Planned Intervention
+
+Developing specific strategies for change.
+
+Continuous Measurement
+
+Objectively tracking progress with data.
+
+Data-Based Decision Making
+
+Adjusting interventions based on measured results.
+
+---
+
+# SECTION 6
 
 ### Crosshead
 
 What Can Behaviour Therapy Help With?
+
+### Body Copy
 
 Behaviour therapy has proven effective in treating a wide range of challenges, including:
 
@@ -81,43 +144,54 @@ ABA-based therapy is particularly effective for children and is often used in ho
 
 ---
 
-# SECTION 4 – HOW DOES IT WORK?
+# SECTION 7
 
 ### Crosshead
 
 How Does Behaviour Therapy Work?
 
+### Body Copy
+
 Certified behaviour therapists or analysts begin with an assessment to understand what triggers a behaviour and what reinforces it.
 
 They then:
 
-Design a personalised intervention plan
+1 Design a personalised intervention plan
 
-Use reinforcement to increase desired behaviours
+2 Use reinforcement to increase desired behaviours
 
-Track progress with data
+3 Track progress with data
 
-Adjust interventions over time for long-term success
+4 Adjust interventions over time for long-term success
 
 ---
 
-# SECTION 5 – THE IMPORTANCE OF CERTIFICATION
+# SECTION 8
+
+### Crosshead
+
+Why Do Some People Consider ABA or Behaviour Therapy Controversial?
+
+### Body Copy
+
+Concerns largely stem from historical unregulated practice, not from the science of Applied Behaviour Analysis (ABA) itself.
+
+In the early development of behavioural interventions during the 1960s and 1970s, some punishment based and poorly regulated practices occurred. At that time, there were no consistent international certification or regulatory standards.
+
+Modern ABA is grounded in decades of research and operates under formal ethical codes, certification requirements, and increasing regulatory oversight. Current concerns in many regions relate to unregulated practice rather than to the scientific foundations of ABA.
+
+---
+
+# SECTION 9
 
 ### Crosshead
 
 The Importance of Certification
 
-Because behaviour therapy is powerful and highly technical it must be delivered by trained professionals. Unqualified providers can unintentionally cause harm. That’s why BARB exists: to regulate, certify, and protect.
+### Body Copy
+
+Because behaviour therapy is a powerful and highly technical professional service, it must be delivered by appropriately trained and qualified practitioners. Unqualified providers may unintentionally cause harm to the public and undermine professional standards in Applied Behaviour Analysis (ABA).
+
+That is why the Behaviour Analysis Registration Board Sri Lanka exists: to regulate practice, certify qualified professionals, and protect the public.
 
 ---
-
-# FINAL CTA SECTION
-
-### Crosshead
-
-Have Questions or Need Support?
-
-Whether you're a parent exploring options or a professional seeking training, we’re here to help you find the answers.
-
-Get in Touch With Us →
-

@@ -18,7 +18,7 @@ export function EthicsCommittee() {
                         </p>
 
                         <div className="mt-8 p-4 bg-gray-50 rounded-lg border border-dashed border-gray-300 text-center">
-                            <span className="text-sm font-semibold text-gray-500 italic">&lt; Committee Members To be Appointed Soon &gt;</span>
+                            <span className="text-sm font-semibold text-gray-500 italic"> Committee Members To be Appointed Soon</span>
                         </div>
                     </div>
 
