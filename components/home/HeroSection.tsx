@@ -41,6 +41,9 @@ export function HeroSection() {
                             <Button asChild size="lg" className="min-w-[200px] h-14 text-lg font-semibold shadow-lg shadow-[var(--color-primary)]/20 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary)]/90 rounded-full">
                                 <Link href="/certification/apply">Become Certified</Link>
                             </Button>
+                            <Button asChild variant="outline" size="lg" className="min-w-[200px] h-14 text-lg font-semibold hover:-translate-y-1 transition-all duration-300 rounded-full border-2 border-[var(--color-primary)] text-[var(--color-primary)] hover:bg-[var(--color-primary)]/5">
+                                <Link href="/directory">Find a Therapist</Link>
+                            </Button>
                         </div>
                     </div>
 
