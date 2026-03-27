@@ -97,7 +97,7 @@ export function MembershipForm() {
             <Card className="border-0 shadow-none">
                 <CardHeader>
                     <CardTitle className="text-3xl font-bold text-center pt-4">
-                        Registered Behaviour Therapist Membership Application
+                        Application to become Registered Behaviour Therapist or Registered Behaviour Analyst.
                     </CardTitle>
                 </CardHeader>
                 <CardContent>

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | BARB",
     default: "Behaviour Analysis Registration Board of Sri Lanka (BARB)",
   },
-  description: "Propelling the field of Behaviour Analysis in Sri Lanka. The official regulatory body for behaviour therapy professionals.",
+  description: "Propelling the field of Behaviour Analysis in Sri Lanka. The regulatory body for behaviour therapy professionals.",
   openGraph: {
     type: "website",
     locale: "en_LK",

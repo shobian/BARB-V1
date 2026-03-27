@@ -23,7 +23,7 @@ export function DonateMissionSection() {
                                 BARB is a not-for-profit organisation working to regulate the field of behaviour therapy and expand access to qualified, certified professionals. We don’t sell services. We raise standards, train therapists, and protect families.
                             </p>
                             <p>
-                                With your help, we can do more; reach more districts, educate more parents, and certify more professionals. As Sri Lanka’s only official regulatory body for behaviour therapy, we rely on partnerships, donations, and sponsorships to deliver on a bold, necessary mission:
+                                With your help, we can do more; reach more districts, educate more parents, and certify more professionals. As Sri Lanka’s regulatory body for behaviour therapy, we rely on partnerships, donations, and sponsorships to deliver on a bold, necessary mission:
                             </p>
                         </div>
 

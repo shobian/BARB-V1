@@ -19,7 +19,7 @@ export function Footer() {
                         </Link>
                         <p className="text-sm text-gray-300 leading-relaxed">
                             The Behaviour Analysis Registration Board (BARB)
-                            is Sri Lanka’s official body regulating and certifying
+                            is Sri Lanka’s body regulating and certifying
                             behaviour therapy professionals.
                         </p>
                     </div>

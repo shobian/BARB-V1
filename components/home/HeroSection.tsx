@@ -21,7 +21,7 @@ export function HeroSection() {
                     {/* Left side text content */}
                     <div className="flex-1 text-center lg:text-left animate-in fade-in slide-in-from-bottom-6 duration-1000">
                         <div className="text-[var(--color-secondary)] text-sm font-semibold mb-4 text-center lg:text-left uppercase tracking-widest">
-                            Sri Lanka’s Official Regulatory Body
+                            Sri Lanka’s Regulatory Body
                         </div>
 
                         <h1 className="text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold font-heading text-[var(--color-primary)] mb-6 leading-[1.15] tracking-tight">
@@ -34,7 +34,7 @@ export function HeroSection() {
                         </p>
 
                         <p className="text-lg text-gray-600 mb-10 leading-relaxed font-light max-w-2xl mx-auto lg:mx-0">
-                            The Behaviour Analysis Registration Board (BARB) is Sri Lanka’s official regulatory body for behaviour therapy: certifying, guiding, and safeguarding professionals who transform lives through ethical, evidence-based care.
+                            The Behaviour Analysis Registration Board (BARB) is Sri Lanka’s regulatory body for behaviour therapy: certifying, guiding, and safeguarding professionals who transform lives through ethical, evidence-based care.
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">

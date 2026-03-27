@@ -19,7 +19,7 @@ export function AboutHero() {
                     </p>
 
                     <p className="text-xl leading-relaxed text-gray-700 font-light mb-10 max-w-3xl mx-auto">
-                        Founded in 2023, the Behaviour Analysis Registration Board (BARB) is Sri Lanka’s official regulatory body for behaviour therapy.
+                        Founded in 2023, the Behaviour Analysis Registration Board (BARB) is Sri Lanka’s regulatory body for behaviour therapy.
                     </p>
 
                     <Button asChild size="lg" className="bg-[var(--color-primary)] hover:bg-[var(--color-primary)]/90 text-white shadow-xl h-14 px-8 text-lg font-semibold">
