@@ -17,7 +17,7 @@ export function HeroSection() {
             </div>
 
             {/* Uniform faded overlay across the full width */}
-            <div className="absolute inset-0 z-0 bg-white/55" />
+            <div className="absolute inset-0 z-0 bg-white/75" />
 
             {/* Decorative Overlay Gradient (giving it that premium colorful feel) */}
             <div className="absolute inset-0 z-0 bg-gradient-to-tr from-blue-100/40 via-blue-50/20 to-transparent mix-blend-multiply" />
@@ -37,7 +37,7 @@ export function HeroSection() {
                         Raising the standard of behaviour therapy in Sri Lanka
                     </p>
 
-                    <p className="text-lg text-gray-700 mb-10 leading-relaxed font-light max-w-2xl mx-auto drop-shadow-sm bg-white/40 backdrop-blur-[2px] rounded-xl p-4">
+                    <p className="text-lg text-gray-700 mb-10 leading-relaxed font-light max-w-2xl mx-auto drop-shadow-sm bg-white/70 backdrop-blur-sm rounded-xl p-4">
                         The Behaviour Analysis Registration Board (BARB) is Sri Lanka’s regulatory body for behaviour therapy: certifying, guiding, and safeguarding professionals who transform lives through ethical, evidence-based care.
                     </p>
 

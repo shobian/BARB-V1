@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Input } from '../ui/input';
 import { Label } from '../ui/label';
 import { Button } from '../ui/button';
 import type { ComponentProps } from '../types/form-types';
 
 export function PersonalInfo({ formData, updateFormData }: ComponentProps) {
-    const [nicFrontFile, setNicFrontFile] = useState<File | null>(null);
-    const [nicBackFile, setNicBackFile] = useState<File | null>(null);
-
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         updateFormData({ [e.target.name]: e.target.value });
     };
@@ -15,15 +12,17 @@ export function PersonalInfo({ formData, updateFormData }: ComponentProps) {
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'front' | 'back') => {
         const file = e.target.files?.[0];
         if (file) {
-            if (type === 'front') {
-                setNicFrontFile(file);
-                updateFormData({ nicFrontFileName: file.name });
-            } else {
-                setNicBackFile(file);
-                updateFormData({ nicBackFileName: file.name });
-            }
+            const key = type === 'front' ? 'nicFrontFile' : 'nicBackFile';
+            const nameField = type === 'front' ? 'nicFrontFileName' : 'nicBackFileName';
+            updateFormData({
+                [nameField]: file.name,
+                files: { ...formData.files, [key]: file },
+            });
         }
     };
+
+    const nicFrontFile = formData.files?.['nicFrontFile'] ?? null;
+    const nicBackFile = formData.files?.['nicBackFile'] ?? null;
 
     return (
         <div className="space-y-4">

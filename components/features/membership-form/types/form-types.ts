@@ -47,20 +47,16 @@ export interface ApplicationFormData {
 
     // Terms and Conditions
     resident?: boolean;
-
     agreeObjectives?: boolean;
-
     agreeMaintenance?: boolean;
-
     agreeLicense?: boolean;
-
     agreeUpdate?: boolean;
-
     agreeMalpractice?: boolean;
-
     agreeEthics?: boolean;
     agreePoliceClearance?: boolean;
 
+    // Actual File objects, keyed by field name — lifted up so review-and-submit can upload them
+    files?: Record<string, File>;
 }
 
 export interface ComponentProps {

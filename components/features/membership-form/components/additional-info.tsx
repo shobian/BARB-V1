@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Label } from '../ui/label';
 import { Input } from '../ui/input';
 import { Textarea } from '../ui/textarea';
@@ -6,12 +5,21 @@ import { Button } from '../ui/button';
 import type { ComponentProps } from '../types/form-types';
 import React from 'react';
 
-export function AdditionalInfo({ formData, updateFormData }: ComponentProps) {
-    const [educationFile, setEducationFile] = useState<File | null>(null);
-    const [workExperienceFile, setWorkExperienceFile] = useState<File | null>(null);
-    const [cvFile, setCvFile] = useState<File | null>(null);
-    const [insuranceFile, setInsuranceFile] = useState<File | null>(null);
+const FILE_KEYS: Record<string, string> = {
+    education: 'educationFile',
+    workExperience: 'workExperienceFile',
+    cv: 'cvFile',
+    insurance: 'insuranceFile',
+};
 
+const NAME_FIELDS: Record<string, keyof import('../types/form-types').ApplicationFormData> = {
+    education: 'educationFileName',
+    workExperience: 'workExperienceFileName',
+    cv: 'cvFileName',
+    insurance: 'insuranceFileName',
+};
+
+export function AdditionalInfo({ formData, updateFormData }: ComponentProps) {
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         updateFormData({ [e.target.name]: e.target.value });
     };
@@ -19,26 +27,19 @@ export function AdditionalInfo({ formData, updateFormData }: ComponentProps) {
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: string) => {
         const file = e.target.files?.[0];
         if (file) {
-            switch (type) {
-                case 'education':
-                    setEducationFile(file);
-                    updateFormData({ educationFileName: file.name });
-                    break;
-                case 'workExperience':
-                    setWorkExperienceFile(file);
-                    updateFormData({ workExperienceFileName: file.name });
-                    break;
-                case 'cv':
-                    setCvFile(file);
-                    updateFormData({ cvFileName: file.name });
-                    break;
-                case 'insurance':
-                    setInsuranceFile(file);
-                    updateFormData({ insuranceFileName: file.name });
-                    break;
-            }
+            const key = FILE_KEYS[type];
+            const nameField = NAME_FIELDS[type];
+            updateFormData({
+                [nameField]: file.name,
+                files: { ...formData.files, [key]: file },
+            });
         }
     };
+
+    const educationFile = formData.files?.['educationFile'] ?? null;
+    const workExperienceFile = formData.files?.['workExperienceFile'] ?? null;
+    const cvFile = formData.files?.['cvFile'] ?? null;
+    const insuranceFile = formData.files?.['insuranceFile'] ?? null;
 
     return (
         <div className="space-y-4">

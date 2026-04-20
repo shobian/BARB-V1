@@ -3,14 +3,9 @@ import { Label } from '../ui/label'
 import { Input } from '../ui/input'
 import { Button } from '../ui/button'
 import type { ComponentProps } from '../types/form-types'
-import { useState } from 'react'
 import React from 'react'
 
 export function CriteriaSelection({ formData, updateFormData }: ComponentProps) {
-    const [expiredRBTFile, setExpiredRBTFile] = useState<File | null>(null)
-    const [expiredIBTFile, setExpiredIBTFile] = useState<File | null>(null)
-    const [behaviourAnalystFile, setBehaviourAnalystFile] = useState<File | null>(null)
-
     const handleChange = (checked: boolean | string, name: string) => {
         updateFormData({ [name]: checked })
     }
@@ -22,19 +17,24 @@ export function CriteriaSelection({ formData, updateFormData }: ComponentProps) 
     const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>, type: 'RBT' | 'IBT' | 'BA') => {
         const file = e.target.files?.[0]
         if (file) {
-            // Validate file type
             const allowedTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document']
             if (allowedTypes.includes(file.type)) {
+                const key = type === 'RBT' ? 'expiredRBTFile' : type === 'IBT' ? 'expiredIBTFile' : 'behaviourAnalystFile'
+                const nameField = `expired${type}FileName`
                 updateFormData({
-                    [`expired${type}FileName`]: file.name
+                    [nameField]: file.name,
+                    files: { ...formData.files, [key]: file },
                 })
-                type === 'RBT' ? setExpiredRBTFile(file) : type === 'IBT' ? setExpiredIBTFile(file) : setBehaviourAnalystFile(file)
             } else {
                 alert('Please upload only PDF or DOC/DOCX files.')
-                e.target.value = '' // Clear the file input
+                e.target.value = ''
             }
         }
     }
+
+    const expiredRBTFile = formData.files?.['expiredRBTFile'] ?? null
+    const expiredIBTFile = formData.files?.['expiredIBTFile'] ?? null
+    const behaviourAnalystFile = formData.files?.['behaviourAnalystFile'] ?? null
 
     return (
         <div className="space-y-4">
