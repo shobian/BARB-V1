@@ -14,17 +14,18 @@ export const metadata: Metadata = {
 export default async function DirectoryPage({
     searchParams,
 }: {
-    searchParams?: {
+    searchParams?: Promise<{
         query?: string;
         status?: string;
         city?: string;
         speciality?: string;
-    };
+    }>;
 }) {
-    const query = searchParams?.query || '';
-    const status = searchParams?.status || 'all';
-    const city = searchParams?.city || '';
-    const speciality = searchParams?.speciality || '';
+    const resolvedParams = await searchParams;
+    const query = resolvedParams?.query || '';
+    const status = resolvedParams?.status || 'all';
+    const city = resolvedParams?.city || '';
+    const speciality = resolvedParams?.speciality || '';
 
     // Fetch unique cities and specialities for dropdowns
     const { data: filterData } = await supabase
