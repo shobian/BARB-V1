@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import { supabase } from "@/lib/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
@@ -36,11 +35,16 @@ export function ContactForm() {
         }
 
         try {
-            const { error: insertError } = await supabase
-                .from("inquiries")
-                .insert([data]);
+            const res = await fetch('/api/contact', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data),
+            });
 
-            if (insertError) throw insertError;
+            if (!res.ok) {
+                const json = await res.json();
+                throw new Error(json.error || 'Failed to send message');
+            }
 
             setSuccess(true);
             setInquiryType(""); // Reset state

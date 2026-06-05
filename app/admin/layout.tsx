@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import { useRouter, usePathname } from 'next/navigation';
 import { supabase } from '@/lib/supabase/client';
-import { Loader2, LogOut, ShieldCheck, LayoutDashboard } from 'lucide-react';
+import { Loader2, LogOut, ShieldCheck, LayoutDashboard, MessageSquare } from 'lucide-react';
 import Link from 'next/link';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
@@ -11,6 +11,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     const pathname = usePathname();
     const [checking, setChecking] = useState(true);
     const [userEmail, setUserEmail] = useState('');
+    const [unreadCount, setUnreadCount] = useState(0);
 
     useEffect(() => {
         supabase.auth.getSession().then(({ data: { session } }) => {
@@ -18,6 +19,12 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 router.replace('/admin/login');
             } else if (session) {
                 setUserEmail(session.user.email ?? '');
+                // Fetch unread inquiry count
+                supabase
+                    .from('inquiries')
+                    .select('id', { count: 'exact', head: true })
+                    .eq('status', 'new')
+                    .then(({ count }) => setUnreadCount(count ?? 0));
             }
             setChecking(false);
         });
@@ -49,6 +56,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                 <div className="flex items-center gap-4 text-sm">
                     <Link href="/admin" className="flex items-center gap-1.5 opacity-80 hover:opacity-100">
                         <LayoutDashboard className="w-4 h-4" /> Applications
+                    </Link>
+                    <Link href="/admin/inquiries" className="flex items-center gap-1.5 opacity-80 hover:opacity-100 relative">
+                        <MessageSquare className="w-4 h-4" /> Inquiries
+                        {unreadCount > 0 && (
+                            <span className="absolute -top-2 -right-3 bg-red-500 text-white text-[10px] font-bold rounded-full w-4 h-4 flex items-center justify-center">
+                                {unreadCount > 9 ? '9+' : unreadCount}
+                            </span>
+                        )}
                     </Link>
                     <span className="opacity-50">|</span>
                     <span className="opacity-70">{userEmail}</span>
