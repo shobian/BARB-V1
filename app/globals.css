@@ -32,3 +32,33 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
 }
+
+.hero-bg {
+  background: linear-gradient(135deg, #0A1E3B 0%, #193661 60%, #1e4080 100%);
+}
+
+.hero-glow {
+  background: radial-gradient(ellipse at 60% 50%, rgba(193, 160, 51, 0.08) 0%, transparent 70%);
+}
+
+.hero-orb-top {
+  background: #C1A033;
+  width: 600px;
+  height: 600px;
+  border-radius: 9999px;
+  position: absolute;
+  top: -8rem;
+  right: -8rem;
+  opacity: 0.05;
+}
+
+.hero-orb-bottom {
+  background: #C1A033;
+  width: 500px;
+  height: 500px;
+  border-radius: 9999px;
+  position: absolute;
+  bottom: -12rem;
+  left: -6rem;
+  opacity: 0.05;
+}
