@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server'
-import { getSupabaseAdmin } from '@/lib/supabase/server'
+import { createClient } from '@supabase/supabase-js'
 
 export async function POST(req: NextRequest) {
     const body = await req.json()
@@ -9,9 +9,12 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 
-    const supabaseAdmin = getSupabaseAdmin()
+    const supabase = createClient(
+        process.env.NEXT_PUBLIC_SUPABASE_URL!,
+        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
+    )
 
-    const { error: dbError } = await supabaseAdmin
+    const { error: dbError } = await supabase
         .from('inquiries')
         .insert([{ name, email, phone, inquiry_type, message, status: 'new' }])
 
